@@ -1,30 +1,27 @@
-﻿<Properties StartupConfiguration="{BF76AC46-2006-4B13-82C5-AFEA798405C6}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="WebApi/Startup.cs">
+﻿<Properties StartupConfiguration="{8C868D28-8E85-46EC-AEFC-BCE7E53E7B27}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="API/Startup.cs">
     <Files>
-      <File FileName="API/Startup.cs" Line="1" Column="1" />
+      <File FileName="API/Startup.cs" Line="15" Column="32" />
       <File FileName="DAL/TodoContext.cs" />
       <File FileName="API/Properties/launchSettings.json" />
       <File FileName="API/appsettings.Development.json" />
       <File FileName="Model/Assignee.cs" />
       <File FileName="Model/Task.cs" />
       <File FileName="WebApi/Properties/launchSettings.json" />
-      <File FileName="WebApi/Startup.cs" Line="35" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Todoit" expanded="True">
-            <Node name="WebApi" expanded="True">
-              <Node name="Startup.cs" selected="True" />
-            </Node>
-          </Node>
+          <Node name="Todoit" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.API PreferredExecutionTarget="/Applications/Opera GX.app" />
-  <MonoDevelop.Ide.ItemProperties.WebApi FirstBuild="True" PreferredExecutionTarget="/Applications/Opera GX.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <DisabledProjects>
+    <String>WebApi/WebApi.csproj</String>
+  </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
