@@ -8,12 +8,12 @@ services:
       SA_PASSWORD: HelloW0rld
       MSSQL_DB: Todoit
     ports:
-      - 33500:1444
+      - 33500:1433
   application:
     image: nadiamiteva/mysqlserver-db
-    environment: 
+    environment:
       ASPNETCORE_ENVIRONMENT: Development
-    depends_on: 
+    depends_on:
       - mysql-db
     ports:
       - 33400:80
