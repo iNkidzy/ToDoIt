@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using BLL;
 using Microsoft.AspNetCore.Mvc;
 using Model;
 
@@ -9,22 +10,27 @@ namespace API.Controllers
     [Route("[controller]")]
     public class AssigneeController : Controller
     {
+        readonly IAssigneeService _assigneeService;
+        public AssigneeController(IAssigneeService assigneeService)
+        {
+            _assigneeService = assigneeService;
+        }
         [HttpGet]
         public IEnumerable<Assignee> Get()
         {
-            throw new NotImplementedException();
+            return _assigneeService.GetAssignees();
         }
         
         [HttpPost]
-        public int Post(Assignee task)
+        public Assignee Post(Assignee assignee)
         {
-            throw new NotImplementedException();
+            return _assigneeService.Create(assignee);
         }
         
         [HttpDelete]
-        public void Delete(int id)
+        public Assignee Delete(int id)
         {
-            throw new NotImplementedException();
+            return _assigneeService.Delete(id);
         }
     }
 }

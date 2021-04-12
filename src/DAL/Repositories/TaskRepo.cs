@@ -17,9 +17,9 @@ namespace DAL.Repositories
 
         public Task Create(Task task)
         {
-            Task t = _ctx.Tasks.Add(task).Entity;
+            _ctx.Attach(task).State = EntityState.Added;
             _ctx.SaveChanges();
-            return t;
+            return task;
         }
 
         public Task Delete(int id)

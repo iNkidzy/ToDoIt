@@ -2,27 +2,28 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="WebApi/Controllers/AssigneeController.cs">
     <Files>
       <File FileName="API/Startup.cs" Line="15" Column="32" />
-      <File FileName="DAL/TodoContext.cs" Line="7" Column="6" />
+      <File FileName="DAL/TodoContext.cs" Line="22" Column="2" />
       <File FileName="API/Properties/launchSettings.json" />
       <File FileName="API/appsettings.Development.json" />
-      <File FileName="Model/Assignee.cs" Line="1" Column="1" />
-      <File FileName="Model/Task.cs" Line="16" Column="2" />
+      <File FileName="Model/Assignee.cs" />
+      <File FileName="Model/Task.cs" />
       <File FileName="WebApi/Properties/launchSettings.json" />
-      <File FileName="DAL/Repositories/AssigneeRepo.cs" Line="37" Column="1" />
-      <File FileName="DAL/Repositories/TaskRepo.cs" Line="58" Column="10" />
-      <File FileName="DAL/DBInitializer.cs" Line="77" Column="31" />
-      <File FileName="BLL/ApplicationService/IAssigneeService.cs" Line="17" Column="2" />
-      <File FileName="BLL/ApplicationService/Service/AssigneeService.cs" Line="20" Column="10" />
-      <File FileName="BLL/ApplicationService/ITaskService.cs" Line="22" Column="2" />
-      <File FileName="BLL/DomainService/IAssigneeRepo.cs" Line="13" Column="2" />
-      <File FileName="BLL/DomainService/ITaskRepo.cs" Line="15" Column="2" />
-      <File FileName="BLL/ApplicationService/Service/TaskService.cs" Line="22" Column="1" />
-      <File FileName="WebApi/appsettings.json" Line="1" Column="1" />
-      <File FileName="WebApi/Program.cs" Line="1" Column="1" />
-      <File FileName="WebApi/Startup.cs" Line="15" Column="17" />
-      <File FileName="API/Controllers/AssigneeController.cs" Line="1" Column="1" />
-      <File FileName="WebApi/Controllers/TaskController.cs" Line="1" Column="1" />
-      <File FileName="WebApi/Controllers/AssigneeController.cs" Line="1" Column="1" />
+      <File FileName="DAL/Repositories/AssigneeRepo.cs" />
+      <File FileName="DAL/Repositories/TaskRepo.cs" Line="22" Column="25" />
+      <File FileName="DAL/DBInitializer.cs" />
+      <File FileName="BLL/ApplicationService/IAssigneeService.cs" />
+      <File FileName="BLL/ApplicationService/Service/AssigneeService.cs" />
+      <File FileName="BLL/ApplicationService/ITaskService.cs" Line="9" Column="14" />
+      <File FileName="BLL/DomainService/IAssigneeRepo.cs" />
+      <File FileName="BLL/DomainService/ITaskRepo.cs" />
+      <File FileName="BLL/ApplicationService/Service/TaskService.cs" />
+      <File FileName="WebApi/appsettings.json" />
+      <File FileName="WebApi/Program.cs" />
+      <File FileName="WebApi/Startup.cs" />
+      <File FileName="API/Controllers/AssigneeController.cs" Line="25" Column="33" />
+      <File FileName="WebApi/Controllers/TaskController.cs" Line="71" Column="10" />
+      <File FileName="WebApi/Controllers/AssigneeController.cs" Line="27" Column="49" />
+      <File FileName="API/Controllers/TaskController.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -32,15 +33,11 @@
               <Node name="Controllers" expanded="True" />
             </Node>
             <Node name="BLL" expanded="True">
-              <Node name="ApplicationService" expanded="True">
-                <Node name="Service" expanded="True" />
-              </Node>
-              <Node name="DomainService" expanded="True" />
+              <Node name="ApplicationService" expanded="True" />
             </Node>
             <Node name="DAL" expanded="True">
               <Node name="Repositories" expanded="True" />
             </Node>
-            <Node name="Model" expanded="True" />
             <Node name="WebApi" expanded="True">
               <Node name="Controllers" expanded="True">
                 <Node name="AssigneeController.cs" selected="True" />
