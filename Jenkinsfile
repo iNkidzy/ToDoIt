@@ -1,18 +1,17 @@
 pipeline {
     agent any
     triggers{
-        pollSCM("0 */6 * * *")
+        pollSCM("H/5 * * * *")
     stages {
         stage("Build Web") {
             steps {
-               echo "===== OPTIONAL: Will build the website (if needed) ====="
-               // dotnet build src/WebRestbApi/WebRestApi.csproj
+               //echo "===== OPTIONAL: Will build the website (if needed) ====="
+                sh "dotnet build src/WebApi/WebApi.csproj"
             }
         }
         stage("Build API") {
             steps {
                 sh "dotnet build src/API/API.csproj"
-               // echo "===== REQUIRED: Will build the API project ====="
             }
         }
         stage("Build database") {
@@ -22,12 +21,19 @@ pipeline {
         }
         stage("Test API") {
             steps {
-                echo "===== REQUIRED: Will execute unit tests of the API project ====="
+              //  echo "===== REQUIRED: Will execute unit tests of the API project ====="
+              sh "dotnet test test/UnitTest UnitTest.csproj"
             }
         }
         stage("Deliver Web") {
             steps {
-                echo "===== REQUIRED: Will deliver the website to Docker Hub ====="
+               // echo "===== REQUIRED: Will deliver the website to Docker Hub ====="
+                sh "docker build ./src/WebApi -t nadiamiteva/mysqlserver-db"
+                withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'DockerHubID', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']])
+				{
+					sh 'docker login -u ${USERNAME} -p ${PASSWORD}'
+				}
+                sh "docker push nadiamiteva/mysqlserver-db"
             }
         }
         stage("Deliver API") {
@@ -50,8 +56,9 @@ pipeline {
         }
         stage("Automated acceptance test") {
             steps {
-                echo "===== REQUIRED: Will use Selenium to execute automatic acceptance tests ====="
+                echo "===== REQUIRED: Will use Selenium to execute automatic acceptance tests  SeleniumHERE====="
             }
         }
     }
+  }
 }

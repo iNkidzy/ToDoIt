@@ -1,21 +1,47 @@
-﻿<Properties StartupConfiguration="{BF76AC46-2006-4B13-82C5-AFEA798405C6}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="WebApi/Startup.cs">
+﻿<Properties StartupConfiguration="{C80FA7B2-A067-460B-9B3C-253766C21120}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WebApi/Controllers/AssigneeController.cs">
     <Files>
-      <File FileName="API/Startup.cs" Line="1" Column="1" />
-      <File FileName="DAL/TodoContext.cs" />
+      <File FileName="API/Startup.cs" Line="15" Column="32" />
+      <File FileName="DAL/TodoContext.cs" Line="22" Column="2" />
       <File FileName="API/Properties/launchSettings.json" />
       <File FileName="API/appsettings.Development.json" />
       <File FileName="Model/Assignee.cs" />
       <File FileName="Model/Task.cs" />
       <File FileName="WebApi/Properties/launchSettings.json" />
-      <File FileName="WebApi/Startup.cs" Line="35" Column="10" />
+      <File FileName="DAL/Repositories/AssigneeRepo.cs" />
+      <File FileName="DAL/Repositories/TaskRepo.cs" Line="22" Column="25" />
+      <File FileName="DAL/DBInitializer.cs" />
+      <File FileName="BLL/ApplicationService/IAssigneeService.cs" />
+      <File FileName="BLL/ApplicationService/Service/AssigneeService.cs" />
+      <File FileName="BLL/ApplicationService/ITaskService.cs" Line="9" Column="14" />
+      <File FileName="BLL/DomainService/IAssigneeRepo.cs" />
+      <File FileName="BLL/DomainService/ITaskRepo.cs" />
+      <File FileName="BLL/ApplicationService/Service/TaskService.cs" />
+      <File FileName="WebApi/appsettings.json" />
+      <File FileName="WebApi/Program.cs" />
+      <File FileName="WebApi/Startup.cs" />
+      <File FileName="API/Controllers/AssigneeController.cs" Line="25" Column="33" />
+      <File FileName="WebApi/Controllers/TaskController.cs" Line="71" Column="10" />
+      <File FileName="WebApi/Controllers/AssigneeController.cs" Line="27" Column="49" />
+      <File FileName="API/Controllers/TaskController.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Todoit" expanded="True">
+            <Node name="API" expanded="True">
+              <Node name="Controllers" expanded="True" />
+            </Node>
+            <Node name="BLL" expanded="True">
+              <Node name="ApplicationService" expanded="True" />
+            </Node>
+            <Node name="DAL" expanded="True">
+              <Node name="Repositories" expanded="True" />
+            </Node>
             <Node name="WebApi" expanded="True">
-              <Node name="Startup.cs" selected="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="AssigneeController.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>
@@ -23,7 +49,7 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.API PreferredExecutionTarget="/Applications/Opera GX.app" />
-  <MonoDevelop.Ide.ItemProperties.WebApi FirstBuild="True" PreferredExecutionTarget="/Applications/Opera GX.app" />
+  <MonoDevelop.Ide.ItemProperties.WebApi PreferredExecutionTarget="/Applications/Opera GX.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
