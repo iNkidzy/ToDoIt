@@ -19,9 +19,6 @@
       <ProjectReference Include="..\BLL\BLL.csproj">
         <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
       </ProjectReference>
-      <ProjectReference Include="..\..\test\UnitTest\UnitTest.csproj">
-        <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
-      </ProjectReference>
     </ItemGroup>
 
 </Project>

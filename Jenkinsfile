@@ -29,7 +29,7 @@ pipeline {
             steps {
                // echo "===== REQUIRED: Will deliver the website to Docker Hub ====="
                 sh "docker build ./src/WebApi -t nadiamiteva/mysqlserver-db"
-                withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'DockerHubID', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']])
+                withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'DockerHub', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']])
 				{
 					sh 'docker login -u ${USERNAME} -p ${PASSWORD}'
 				}
@@ -40,7 +40,7 @@ pipeline {
             steps {
                 // echo "===== REQUIRED: Will deliver the API to Docker Hub ====="
                 sh "docker build ./db/docker -t nadiamiteva/mysqlserver-db"
-                withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'DockerHubID', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']])
+                withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'DockerHub', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']])
 				{
 					sh 'docker login -u ${USERNAME} -p ${PASSWORD}'
 				}

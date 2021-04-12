@@ -17,6 +17,16 @@
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
             <PrivateAssets>all</PrivateAssets>
         </PackageReference>
+        <PackageReference Include="Moq.EntityFrameworkCore" Version="5.0.0.2" />
+        <PackageReference Include="Moq" Version="4.16.1" />
+        <PackageReference Include="FluentAssertions" Version="5.10.3" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\..\src\Model\Model.csproj" />
+      <ProjectReference Include="..\..\src\BLL\BLL.csproj" />
+      <ProjectReference Include="..\..\src\API\API.csproj" />
+      <ProjectReference Include="..\..\src\DAL\DAL.csproj" />
+      <ProjectReference Include="..\..\src\WebApi\WebApi.csproj" />
+    </ItemGroup>
 </Project>
