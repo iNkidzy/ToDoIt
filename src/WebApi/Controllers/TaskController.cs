@@ -1,14 +1,15 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using BLL;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Model;
 
 namespace WebApi.Controllers
 {
-    [Route("api/task")]
+    //[Produces("application/json")] //
+    [Route("api/[controller]")]
     [ApiController]
     public class TaskController : ControllerBase
     {
@@ -18,6 +19,13 @@ namespace WebApi.Controllers
         {
             _taskService = taskService;
         }
+        
+        [HttpGet]
+        public ActionResult<List<Task>> Get()
+        {
+            return _taskService.GetTasks();
+        }
+        /*
         // GET: api/Task
         [HttpGet]
         public ActionResult Get()
@@ -32,7 +40,8 @@ namespace WebApi.Controllers
             }
             
         }
-
+*/
+     
         // GET: api/Task/5
         [HttpGet("{id}")]
         public ActionResult<Task> Get(int id)
@@ -103,5 +112,6 @@ namespace WebApi.Controllers
                 return StatusCode(500, e.Message);
             }
         }
+        
     }
 }

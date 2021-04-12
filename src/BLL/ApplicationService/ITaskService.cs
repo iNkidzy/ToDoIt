@@ -16,7 +16,7 @@ namespace BLL
 
         Task Delete(int id);
 
-        List<Task> GetTask();
+        List<Task> GetTasks();
         
     }
 }

@@ -6,19 +6,24 @@ using Model;
 
 namespace API.Controllers
 {
+    [Produces("application/json")] //
     [ApiController]
     [Route("[controller]")]
     public class TaskController : Controller
     {
         readonly ITaskService _taskService;
+        
         public TaskController(ITaskService taskService)
         {
+            
             _taskService = taskService;
         }
         [HttpGet]
-        public IEnumerable<Task> Get()
+        public ActionResult<List<Task>> Get()
+        
         {
-            return _taskService.GetTask();
+            Console.Out.WriteLine("First display of filenames to the console:");
+            return _taskService.GetTasks();
         }
         
         [HttpPost]

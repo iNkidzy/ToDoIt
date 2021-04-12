@@ -43,7 +43,7 @@ namespace BLL.ApplicationService
             return _taskRepo.FindById(id);
         }
 
-        public List<Task> GetTask()
+        public List<Task> GetTasks()
         {
             return _taskRepo.GetTask().ToList();
         }
