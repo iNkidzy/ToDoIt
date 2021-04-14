@@ -29,23 +29,23 @@ pipeline {
         stage("Deliver Web") {
             steps {
                // echo "===== REQUIRED: Will deliver the website to Docker Hub ====="
-                sh "docker build ./src/WebApi -t nadiamiteva/todoit_mysql-db"
+                sh "docker build ./src/WebApi -t nadiamiteva/mysqlserver-db"
                 withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'DockerHub', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']])
 				{
 					sh 'docker login -u ${USERNAME} -p ${PASSWORD}'
 				}
-                sh "docker push nadiamiteva/todoit_mysql-db"
+                sh "docker push nadiamiteva/mysqlserver-db"
             }
         }
         stage("Deliver API") {
             steps {
                 // echo "===== REQUIRED: Will deliver the API to Docker Hub ====="
-                sh "docker build ./db/docker -t nadiamiteva/todoit_mysql-db"
+                sh "docker build ./db/docker -t nadiamiteva/mysqlserver-db"
                 withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'DockerHub', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']])
 				{
 					sh 'docker login -u ${USERNAME} -p ${PASSWORD}'
 				}
-                sh "docker push nadiamiteva/todoit_mysql-db"
+                sh "docker push nadiamiteva/mysqlserver-db"
             }
         }
         stage("Release staging environment") {

@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{C80FA7B2-A067-460B-9B3C-253766C21120}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="../test/UnitTest/TaskControllersTests.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../test/UnitTest/TaskRepositoryTest.cs">
     <Files>
       <File FileName="API/Startup.cs" Line="15" Column="32" />
       <File FileName="DAL/TodoContext.cs" />
@@ -24,8 +24,8 @@
       <File FileName="WebApi/Controllers/TaskController.cs" />
       <File FileName="WebApi/Controllers/AssigneeController.cs" />
       <File FileName="API/Controllers/TaskController.cs" />
-      <File FileName="../test/UnitTest/TaskRepositoryTest.cs" />
-      <File FileName="../test/UnitTest/TaskControllersTests.cs" Line="38" Column="10" />
+      <File FileName="../test/UnitTest/TaskRepositoryTest.cs" Line="17" Column="10" />
+      <File FileName="../test/UnitTest/TaskControllersTests.cs" />
       <File FileName="../test/UnitTest/AssigneeControllersTests.cs" />
     </Files>
     <Pads>
@@ -33,13 +33,16 @@
         <State name="__root__">
           <Node name="Todoit" expanded="True">
             <Node name="API" expanded="True" />
-            <Node name="BLL" expanded="True" />
+            <Node name="BLL" expanded="True">
+              <Node name="ApplicationService" expanded="True">
+                <Node name="Service" expanded="True" />
+              </Node>
+            </Node>
             <Node name="DAL" expanded="True">
+              <Node name="Dependencies" selected="True" />
               <Node name="Repositories" expanded="True" />
             </Node>
-            <Node name="UnitTest" expanded="True">
-              <Node name="TaskControllersTests.cs" selected="True" />
-            </Node>
+            <Node name="UnitTest" expanded="True" />
           </Node>
         </State>
       </Pad>
