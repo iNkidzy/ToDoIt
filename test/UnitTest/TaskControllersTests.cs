@@ -12,21 +12,21 @@ using Xunit;
 
 namespace UnitTest
 {
-    public class ControllersTests
+    public class TaskControllersTests
     {
         private TaskService taskService;
         private TaskRepo tRepository;
         public static DbContextOptions<TodoContext>dbContextOptions { get; }
         public static string DatabaseConnectionString = "Server=mysql-db;Database=Todoit;UID=sa;PWD=HelloW0rld;";
 
-        static ControllersTests()
+        static TaskControllersTests()
         {
             dbContextOptions = new DbContextOptionsBuilder<TodoContext>()
                                 .UseSqlServer(DatabaseConnectionString)
                                 .Options;
         }
 
-        public ControllersTests()
+        public TaskControllersTests()
         {
             var context = new TodoContext(dbContextOptions);
             DBInitializer db = new DBInitializer();
@@ -49,7 +49,7 @@ namespace UnitTest
             var data =  controller.Get(taskId);
 
             //Assert
-            Assert.IsType<NotFoundResult>(data);
+            Assert.IsType<OkObjectResult>(data);
 
 
          }
@@ -66,7 +66,23 @@ namespace UnitTest
             //Assert
             Assert.IsType<OkObjectResult>(data);
         }
-        //TestCase3: Update by id succesfully
+
+        //TestCase3: Create Task
+        [Fact]
+        public void Create_ValidData_Return_OkResult()
+        {
+            //Arrange
+            var controller = new TaskController(taskService);
+            var task = new Task() { Description ="Finnish presentation", IsCompleted =true, DueDate = DateTime.Now };
+
+            //Act
+            var data = controller.Post(task);
+
+            //Assert
+            Assert.IsType<OkObjectResult>(data);
+        }
+
+        //TestCase4: Update by id succesfully
         [Fact]
         public void Task_Update_ValidData_Return_OkResult()
         {
@@ -91,7 +107,7 @@ namespace UnitTest
             Assert.IsType<OkResult>(updatedData);
         }
 
-        //TestCase4: Delete succesfully
+        //TestCase5: Delete succesfully
         [Fact]
         public void Task_Delete_Return_OkResult()
         {

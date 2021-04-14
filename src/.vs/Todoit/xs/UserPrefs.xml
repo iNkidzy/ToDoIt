@@ -1,8 +1,8 @@
 ﻿<Properties StartupConfiguration="{C80FA7B2-A067-460B-9B3C-253766C21120}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="../test/UnitTest/ControllersTests.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../test/UnitTest/TaskControllersTests.cs">
     <Files>
       <File FileName="API/Startup.cs" Line="15" Column="32" />
-      <File FileName="DAL/TodoContext.cs" Line="22" Column="2" />
+      <File FileName="DAL/TodoContext.cs" />
       <File FileName="API/Properties/launchSettings.json" />
       <File FileName="API/appsettings.Development.json" />
       <File FileName="Model/Assignee.cs" />
@@ -21,20 +21,23 @@
       <File FileName="WebApi/Program.cs" />
       <File FileName="WebApi/Startup.cs" />
       <File FileName="API/Controllers/AssigneeController.cs" />
-      <File FileName="WebApi/Controllers/TaskController.cs" />
-      <File FileName="WebApi/Controllers/AssigneeController.cs" Line="27" Column="49" />
+      <File FileName="WebApi/Controllers/TaskController.cs" Line="1" Column="1" />
+      <File FileName="WebApi/Controllers/AssigneeController.cs" Line="1" Column="1" />
       <File FileName="API/Controllers/TaskController.cs" />
-      <File FileName="../test/UnitTest/TaskRepositoryTest.cs" Line="13" Column="10" />
-      <File FileName="../test/UnitTest/ControllersTests.cs" Line="1" Column="1" />
+      <File FileName="../test/UnitTest/TaskRepositoryTest.cs" />
+      <File FileName="../test/UnitTest/TaskControllersTests.cs" Line="38" Column="10" />
+      <File FileName="../test/UnitTest/AssigneeControllersTests.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Todoit" expanded="True">
             <Node name="API" expanded="True" />
-            <Node name="DAL" expanded="True" />
+            <Node name="DAL" expanded="True">
+              <Node name="Repositories" expanded="True" />
+            </Node>
             <Node name="UnitTest" expanded="True">
-              <Node name="ControllersTests.cs" selected="True" />
+              <Node name="TaskControllersTests.cs" selected="True" />
             </Node>
           </Node>
         </State>
