@@ -10,9 +10,10 @@ services:
     ports:
       - 33500:1433
   application:
-    image: nadiamiteva/mysqlserver-db
+    image: nadiamiteva/todoit_mysql-db
     environment:
       ASPNETCORE_ENVIRONMENT: Development
+      DatabaseConnectionString: Server=mysql-db;Database=Todoit;UserId= SA;SA_PASSWORD= HelloW0rld;
     depends_on:
       - mysql-db
     ports:
