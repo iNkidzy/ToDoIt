@@ -10,7 +10,7 @@ services:
     ports:
       - 33500:1433
   application:
-    image: nadiamiteva/mysqlserver-db
+    image: nadiamiteva/todoit_mysql-db
     environment:
       ASPNETCORE_ENVIRONMENT: Development
     depends_on:
