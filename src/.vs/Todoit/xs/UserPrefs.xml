@@ -21,18 +21,19 @@
       <File FileName="WebApi/Program.cs" />
       <File FileName="WebApi/Startup.cs" />
       <File FileName="API/Controllers/AssigneeController.cs" />
-      <File FileName="WebApi/Controllers/TaskController.cs" Line="1" Column="1" />
-      <File FileName="WebApi/Controllers/AssigneeController.cs" Line="1" Column="1" />
+      <File FileName="WebApi/Controllers/TaskController.cs" />
+      <File FileName="WebApi/Controllers/AssigneeController.cs" />
       <File FileName="API/Controllers/TaskController.cs" />
       <File FileName="../test/UnitTest/TaskRepositoryTest.cs" />
       <File FileName="../test/UnitTest/TaskControllersTests.cs" Line="38" Column="10" />
-      <File FileName="../test/UnitTest/AssigneeControllersTests.cs" Line="1" Column="1" />
+      <File FileName="../test/UnitTest/AssigneeControllersTests.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Todoit" expanded="True">
             <Node name="API" expanded="True" />
+            <Node name="BLL" expanded="True" />
             <Node name="DAL" expanded="True">
               <Node name="Repositories" expanded="True" />
             </Node>
